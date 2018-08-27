@@ -37,6 +37,7 @@ cd $HOME/AIY-projects-python
 
 virtualenv --system-site-packages -p python3 env
 env/bin/pip install -e src
+env/bin/pip install google-auth-oauthlib  # TODO Temporary fix for missing dependency
 
 ln -s examples/voice/assistant_library_with_local_commands_demo.py src/AssistantPi.py
 echo "$SERVICE" | sudo tee /lib/systemd/system/AssistantPi.service > /dev/null
